@@ -4,19 +4,20 @@ body {
 }
 
 body {
-  background: #a6c1a6;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
   flex-direction: column;
+  -webkit-animation: background 1s ease-in-out alternate infinite;
+  animation: background 1s ease-in-out alternate infinite;
 }
 
 .panda {
   transform: scale(1.2) translateY(40px);
   zoom: 1.2;
   -webkit-animation: panda 0.25s ease-in-out alternate infinite;
-          animation: panda 0.25s ease-in-out alternate infinite;
+          animation: panda 1s ease-in-out alternate infinite;
   transform-origin: bottom center;
 }
 .panda__ears {
@@ -374,5 +375,21 @@ body {
   }
   100% {
     transform: scale(1.15, 0.3) translateY(-27px);
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    background: hsl(0deg 17.88% 70.39%);
+  }
+  100% {
+    background: hsl(3600deg 17.88% 70.39%);
+  }
+}
+@keyframes background {
+  0% {
+    background: hsl(0deg 17.88% 70.39%);
+  }
+  100% {
+    background: hsl(191.6deg 17.88% 70.39%);
   }
 }
